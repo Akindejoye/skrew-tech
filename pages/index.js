@@ -1,3 +1,5 @@
+import Footer from "../components/footer";
+
 const Home = () => {
   return (
     <>
@@ -13,7 +15,9 @@ const Home = () => {
           </section>
           <section className="team">Meet Our Team</section>
         </main>
-        <footer>This is Footer</footer>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </>
   );
