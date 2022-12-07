@@ -25,8 +25,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <hr />
         <div className="bottom">
-          <hr />
           <div className="rights">
             <span>2022 - All rights Reserved</span>
           </div>

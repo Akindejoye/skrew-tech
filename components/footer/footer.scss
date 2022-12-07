@@ -1,5 +1,5 @@
 .footer {
-  min-height: 658px;
+  height: 658px;
   padding-left: 35px;
   padding-right: 35px;
   color: var(--clr-white);
@@ -59,17 +59,17 @@
     }
   }
 
-  .bottom {
-    font-size: 12px !important;
-    font-weight: 500 !important;
-    line-height: 18px !important;
-    margin-top: 40px !important;
+  hr {
+    border: none;
+    height: 1.5px;
+    background-color: var(--clr-white);
+  }
 
-    hr {
-      border: none;
-      height: 1.5px;
-      background-color: var(--clr-white);
-    }
+  .bottom {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
 
     .rights {
       margin-top: 25px;
@@ -87,19 +87,54 @@
 
 /****** MEDIA QUERIES ****************/
 
-@media (min-width: 671px) {
+@media (min-width: 999px) {
   .footer {
-    // min-height: 658px;
-    padding-left: 0px;
-    padding-right: 0px;
-    color: red;
-
+    height: 510px;
+    padding-left: 5%;
+    padding-right: 8%;
     .top {
       display: flex;
       flex-direction: row;
+      justify-content: center;
+      padding-top: 80px;
 
       .right {
+        flex: 2;
         display: flex;
+        justify-content: right;
+        gap: 10%;
+      }
+
+      .left {
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 0;
+      }
+    }
+
+    hr {
+      margin-top: 122px;
+    }
+
+    .bottom {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .rights {
+        margin-top: 0px;
+      }
+  
+      .terms {
+        margin-top: 0px;
+        width: 46%;
+        display: flex;
+        justify-content: space-between;
+        
+        span {
+          margin-right: 20px;
+        }
       }
     }
   }
