@@ -3,9 +3,54 @@ import Mayor from "/public/images/se-one.svg";
 import Chief from "/public/images/chief-tec.svg";
 import PM from "/public/images/pm.svg";
 import TeamCard from "../teamCard";
+import TeamCardLarge from "../teamCardLarge";
+import useWindowDimension from "use-window-dimensions";
 
 const Team = () => {
-  const slides = [
+  const { width, height } = useWindowDimension();
+
+  console.log(width);
+
+  let slidesBig = [
+    <TeamCardLarge
+      key="chief"
+      name="Okunola O. Ogunlola"
+      desc="Chief Technology Officer"
+      img={Chief}
+      nameTwo="Oyeleye Mayowa"
+      descTwo="Software Engineer"
+      imgTwo={Mayor}
+      nameThree="Akinwumi Akinyemi"
+      descThree="Project Manager"
+      imgThree={PM}
+    />,
+    <TeamCardLarge
+      key="mayo"
+      name="Oyeleye Mayowa"
+      desc="Software Engineer"
+      img={Mayor}
+      nameTwo="Okunola O. Ogunlola"
+      descTwo="Chief Technology Officer"
+      imgTwo={Chief}
+      nameThree="Akinwumi Akinyemi"
+      descThree="Project Manager"
+      imgThree={PM}
+    />,
+    <TeamCardLarge
+      key="akin"
+      name="Akinwumi Akinyemi"
+      desc="Project Manager"
+      img={PM}
+      nameTwo="Okunola O. Ogunlola"
+      descTwo="Chief Technology Officer"
+      imgTwo={Chief}
+      nameThree="Oyeleye Mayowa"
+      descThree="Software Engineer"
+      imgThree={Mayor}
+    />,
+  ];
+
+  const slidesSmall = [
     <TeamCard
       key="chief"
       name="Okunola O. Ogunlola"
@@ -25,6 +70,13 @@ const Team = () => {
       img={PM}
     />,
   ];
+
+  const selectSlide = (slideOne, slideTwo) => {
+    if (width >= 1220) return slideOne;
+    return slideTwo;
+  };
+
+  const slides = selectSlide(slidesBig, slidesSmall);
 
   const containerStyles = {
     // width: "500px",

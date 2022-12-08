@@ -35,7 +35,7 @@ const Slider = ({ slides }) => {
     color: "#D9D9D9",
     fontSize: "30px",
     marginRight: "12px",
-    transition: "100ms ease-in-out",
+    // transition: "100ms ease-in-out",
   };
   const dotStylesActive = {
     cursor: "pointer",
