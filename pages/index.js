@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "../components/footer";
 import Team from "../components/team";
+import MobileNav from "../components/mobileNav";
 
 const Home = () => {
   return (
@@ -11,7 +12,9 @@ const Home = () => {
       </Head>
       <body>
         <header>
-          <nav></nav>
+          <nav>
+            <MobileNav />
+          </nav>
           <section>Hero Section</section>
         </header>
         <main>

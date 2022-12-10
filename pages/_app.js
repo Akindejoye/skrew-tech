@@ -4,6 +4,7 @@ import '../components/footer/footer.scss';
 import '../components/team/team.scss';
 import '../components/slider/slider.scss';
 import '../components/teamCard/teamCard.scss'
+import '../components/mobileNav/mobileNav.scss';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
