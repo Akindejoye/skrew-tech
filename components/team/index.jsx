@@ -1,15 +1,21 @@
+import { useState, useEffect } from "react";
 import Slider from "../slider/Slider";
 import Mayor from "/public/images/se-one.svg";
 import Chief from "/public/images/chief-tec.svg";
 import PM from "/public/images/pm.svg";
 import TeamCard from "../teamCard";
 import TeamCardLarge from "../teamCardLarge";
-import useWindowDimension from "use-window-dimensions";
 
-const Team = () => {
-  const { width, height } = useWindowDimension();
+const Team = ({ windowWidth }) => {
+  const [currentWindowWidth, setCurrentWindowWidth] = useState(windowWidth);
 
-  console.log(width);
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setCurrentWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
 
   let slidesBig = [
     <TeamCardLarge
@@ -23,6 +29,7 @@ const Team = () => {
       nameThree="Akinwumi Akinyemi"
       descThree="Project Manager"
       imgThree={PM}
+      classNames="slide-animat"
     />,
     <TeamCardLarge
       key="mayo"
@@ -35,6 +42,7 @@ const Team = () => {
       nameThree="Akinwumi Akinyemi"
       descThree="Project Manager"
       imgThree={PM}
+      classNames="slide-animat"
     />,
     <TeamCardLarge
       key="akin"
@@ -47,6 +55,7 @@ const Team = () => {
       nameThree="Oyeleye Mayowa"
       descThree="Software Engineer"
       imgThree={Mayor}
+      classNames="slide-animat"
     />,
   ];
 
@@ -72,17 +81,11 @@ const Team = () => {
   ];
 
   const selectSlide = (slideOne, slideTwo) => {
-    if (width >= 1220) return slideOne;
+    if (currentWindowWidth >= 1220) return slideOne;
     return slideTwo;
   };
 
   const slides = selectSlide(slidesBig, slidesSmall);
-
-  const containerStyles = {
-    // width: "500px",
-    // height: "500px",
-    // margin: "0 auto",
-  };
 
   return (
     <>
@@ -93,7 +96,7 @@ const Team = () => {
           penatibus blandit metus in placerat hac dignissim cursus. Mi at ipsum,
           tristique nunc. Pellentesque diam accumsan arcu placerat eleifend id.
         </p>
-        <div style={containerStyles}>
+        <div>
           <Slider slides={slides} />
         </div>
       </div>
@@ -102,3 +105,10 @@ const Team = () => {
 };
 
 export default Team;
+
+Team.getInitialProps = (ctx) => {
+  // Get the window width from the server-side context
+  const { req } = ctx;
+  const windowWidth = req ? req.headers["user-agent"] : window.innerWidth;
+  return { windowWidth };
+};

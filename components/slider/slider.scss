@@ -28,6 +28,12 @@
   .slides {
     width: 100%;
     height: 100%;
-    transition: 'all 2s ease-in-out';
+    animation: slide-animate 4s ease-in-out;
+    // transition: 'all 2s ease-in-out';
   }
+}
+
+@keyframes slide-animate {
+  from { opacity: 0; }
+  to {opacity: 1;;}
 }

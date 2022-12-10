@@ -23,6 +23,10 @@
   }
 }
 
+.slide-animat {
+  animation: slide-animate 4s ease-in-out;
+}
+
 /***********MEDIA QUERIES****************/
 
 @media (min-width: 700px) {
@@ -43,4 +47,9 @@
       max-width: 667px;
     }
   }
+}
+
+@keyframes slide-animate {
+  from { opacity: 0; }
+  to {opacity: 1;;}
 }
