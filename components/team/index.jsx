@@ -5,17 +5,10 @@ import Chief from "/public/images/chief-tec.svg";
 import PM from "/public/images/pm.svg";
 import TeamCard from "../teamCard";
 import TeamCardLarge from "../teamCardLarge";
+import { useGetWidth } from "../../CustomHooks/useGetWidth";
 
 const Team = ({ windowWidth }) => {
-  const [currentWindowWidth, setCurrentWindowWidth] = useState(windowWidth);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setCurrentWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleWindowResize);
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
+  const [currentWindowWidth] = useGetWidth(windowWidth);
 
   let slidesBig = [
     <TeamCardLarge

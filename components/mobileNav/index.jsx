@@ -22,8 +22,7 @@ const MobileNav = () => {
           className="nav"
           onClick={handleNav}
           style={{
-            left: nav ? "0" : "-200px",
-            right: nav ? "0" : "",
+            transform: nav ? "translateX(-800px)" : "translateY(0)",
           }}
         >
           <ul>
