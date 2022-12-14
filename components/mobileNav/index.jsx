@@ -10,19 +10,32 @@ const MobileNav = () => {
   return (
     <>
       <div className="mobileNav">
-        <div className="top">
+        <div className="top-nav">
+          <img src="/images/logo-bg.svg" alt="Logo" />
+          <div className="nav-link">
+            <ul>
+              <li>Services</li>
+              <li>Resources</li>
+              <li>Company</li>
+              <li>Blog</li>
+              <li>Contact Us</li>
+            </ul>
+            <button>Let&apos;s Talk</button>
+          </div>
+        </div>
+        {/* <div className="top">
           <img src="/images/logo-sm.svg" alt="Logo" />
           <img
             src="/images/hamburger.svg"
             alt="Hamburger"
             onClick={handleNav}
           />
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className="nav"
           onClick={handleNav}
           style={{
-            transform: nav ? "translateX(-800px)" : "translateY(0)",
+            transform: !nav ? "translateX(-800px)" : "translateX(0)",
           }}
         >
           <ul>
@@ -32,7 +45,7 @@ const MobileNav = () => {
             <li>Blog</li>
             <li>Contact Us</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </>
   );
