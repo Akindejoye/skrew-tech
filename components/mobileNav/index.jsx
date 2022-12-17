@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useGetWidth } from "../../CustomHooks/useGetWidth";
 
 const MobileNav = () => {
   const [nav, setNav] = useState(false);
@@ -23,19 +24,20 @@ const MobileNav = () => {
             <button>Let&apos;s Talk</button>
           </div>
         </div>
-        {/* <div className="top">
-          <img src="/images/logo-sm.svg" alt="Logo" />
+
+        <div className="top">
+          <img src="/images/logo-bg.svg" alt="Logo" className="logo" />
           <img
             src="/images/hamburger.svg"
             alt="Hamburger"
             onClick={handleNav}
           />
-        </div> */}
-        {/* <div
+        </div>
+        <div
           className="nav"
           onClick={handleNav}
           style={{
-            transform: !nav ? "translateX(-800px)" : "translateX(0)",
+            transform: !nav ? "translateX(-1400px)" : "translateX(0)",
           }}
         >
           <ul>
@@ -45,7 +47,7 @@ const MobileNav = () => {
             <li>Blog</li>
             <li>Contact Us</li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </>
   );
