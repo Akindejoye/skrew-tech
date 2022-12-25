@@ -2,6 +2,7 @@ import Head from "next/head";
 import Footer from "../components/footer";
 import Team from "../components/team";
 import MobileNav from "../components/mobileNav";
+import Hero from "../components/hero";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
           <nav>
             <MobileNav />
           </nav>
-          <section>Hero Section</section>
+          <section>
+            <Hero />
+          </section>
         </header>
         <main>
           <section className="services">Our Services</section>
