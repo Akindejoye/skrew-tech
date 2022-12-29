@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import Team from "../components/team";
 import MobileNav from "../components/mobileNav";
 import Hero from "../components/hero";
+import Solutions from "./../components/solutions/index";
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
         <main>
           <section className="services">Our Services</section>
           <section className="solutions">
-            We Are Here For Your Business Solutions
+            <Solutions />
           </section>
           <section className="team">
             <Team />

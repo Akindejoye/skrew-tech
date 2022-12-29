@@ -6,6 +6,7 @@ import '../components/slider/slider.scss';
 import '../components/teamCard/teamCard.scss'
 import '../components/mobileNav/mobileNav.scss';
 import '../components/hero/hero.scss';
+import '../components/solutions/solutions.scss';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
