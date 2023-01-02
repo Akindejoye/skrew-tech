@@ -7,6 +7,9 @@ import '../components/teamCard/teamCard.scss'
 import '../components/mobileNav/mobileNav.scss';
 import '../components/hero/hero.scss';
 import '../components/solutions/solutions.scss';
+import '../components/services/services.scss';
+import '../components/servicesMobile/servicesMobile.scss';
+import '../components/serviceDesktop/serviceDesktop.scss';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

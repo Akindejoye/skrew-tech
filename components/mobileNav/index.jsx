@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useGetWidth } from "../../CustomHooks/useGetWidth";
+import { Link } from "react-scroll/modules";
 
 const MobileNav = () => {
   const [nav, setNav] = useState(false);
@@ -15,9 +15,42 @@ const MobileNav = () => {
           <img src="/images/logo-bg.svg" alt="Logo" />
           <div className="nav-link">
             <ul>
-              <li>Services</li>
-              <li>Resources</li>
-              <li>Company</li>
+              <li>
+                <Link
+                  activeClass="active"
+                  to="services"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={700}
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  activeClass="active"
+                  to="resources"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={700}
+                >
+                  Resources
+                </Link>
+              </li>
+              <li>
+                <Link
+                  activeClass="active"
+                  to="company"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={700}
+                >
+                  Company
+                </Link>
+              </li>
               <li>Blog</li>
               <li>Contact Us</li>
             </ul>

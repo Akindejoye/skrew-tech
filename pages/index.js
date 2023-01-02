@@ -4,6 +4,7 @@ import Team from "../components/team";
 import MobileNav from "../components/mobileNav";
 import Hero from "../components/hero";
 import Solutions from "./../components/solutions/index";
+import Services from "../components/services";
 
 const Home = () => {
   return (
@@ -22,11 +23,13 @@ const Home = () => {
           </section>
         </header>
         <main>
-          <section className="services">Our Services</section>
-          <section className="solutions">
+          <section className="services">
+            <Services />
+          </section>
+          <section className="solutions" id="company">
             <Solutions />
           </section>
-          <section className="team">
+          <section className="team" id="resources">
             <Team />
           </section>
         </main>

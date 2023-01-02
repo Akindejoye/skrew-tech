@@ -1,0 +1,77 @@
+.services-desktop {
+  min-height: 950px;
+  position: relative;
+
+    .content-desk {
+      margin-top: 116px;
+      margin-left: 136px;
+      h1 {
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 36px;
+        margin-bottom: 27px;
+        color: var(--clr-primary);
+        text-transform: uppercase;
+      }
+  
+      h2 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 54px;
+        margin-bottom: 27px;
+        color: var(--clr-terciary);
+        width: 437px;
+      }
+  
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        max-width: 505px;
+        color: var(--clr-terciary);
+      }
+    }
+
+    .frame-1 {
+      height: 315px;
+      width: 330px;
+
+      position: absolute;
+      top: 196px;
+      left: 676px;
+    }
+    .frame-2 {
+      height: 315px;
+      width: 330px;
+
+      position: absolute;
+      top: 116px;
+      right: 136px;
+    }
+    .frame-3 {
+      height: 315px;
+      width: 330px;
+
+      position: absolute;
+      bottom: 83px;
+      left: 306px;
+    }
+    .frame-4 {
+      height: 315px;
+      width: 330px;
+
+      position: absolute;
+      bottom: 83px;
+      left: 676px;
+    }
+
+      .frame-5 {
+      height: 315px;
+      width: 330px;
+      margin-left: 27px;
+
+      position: absolute;
+      bottom: 164px;
+      right: 136px;
+    }
+}
