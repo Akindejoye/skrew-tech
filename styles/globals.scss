@@ -27,3 +27,24 @@ h4 {
     font-weight: 500 !important;
     line-height: 21px !important;
 }
+
+body {
+    position: relative;
+
+    .button-top {
+        position: fixed;
+        top: 400px;
+        right: 20px;
+        z-index: 9999;
+
+        button {
+            font-size: 30px;
+            padding: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 100px;
+            background-color: var(--clr-white);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+    }
+}

@@ -37,11 +37,26 @@
           line-height: 24px;
           color: var(--clr-ash-pen);
           cursor: pointer;
+          padding-bottom: 4px;
+          border-bottom: 2.5px solid var(--clr-white);
+          transition: all 700ms ease-in-out;
 
           &:not(:last-child) {
             margin-right: 53px;
           }
+
+          &:hover {
+            border-bottom: 2.5px solid var(--clr-secondary);
+          }
         }
+
+        Link {
+
+          .active {
+            color: red;
+          }
+        }
+
       }
 
       button {

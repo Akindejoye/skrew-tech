@@ -8,6 +8,10 @@ const MobileNav = () => {
     setNav(!nav);
   };
 
+  const active = {
+    color: "red",
+  };
+
   return (
     <>
       <div className="mobileNav">
@@ -74,9 +78,45 @@ const MobileNav = () => {
           }}
         >
           <ul>
-            <li>Services</li>
-            <li>Resources</li>
-            <li>Company</li>
+            <li>
+              <Link
+                activeClass="active"
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1500}
+                onClick={handleNav}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="resources"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1500}
+                onClick={handleNav}
+              >
+                Resources
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="company"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1500}
+                onClick={handleNav}
+              >
+                Company
+              </Link>
+            </li>
             <li>Blog</li>
             <li>Contact Us</li>
           </ul>

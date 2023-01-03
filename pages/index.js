@@ -5,8 +5,12 @@ import MobileNav from "../components/mobileNav";
 import Hero from "../components/hero";
 import Solutions from "./../components/solutions/index";
 import Services from "../components/services";
+import { Link } from "react-scroll/modules";
+import { useGetScroll } from "../CustomHooks/useGetScroll";
 
-const Home = () => {
+const Home = ({ windowScroll }) => {
+  const [currentWindowScroll] = useGetScroll(windowScroll);
+
   return (
     <>
       <Head>
@@ -14,7 +18,21 @@ const Home = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <body>
-        <header>
+        {currentWindowScroll >= 520 && (
+          <div className="button-top">
+            <Link
+              activeClass="active"
+              to="header"
+              spy={true}
+              smooth={true}
+              offset={-2000}
+              duration={700}
+            >
+              <button>&#8593;</button>
+            </Link>
+          </div>
+        )}
+        <header id="header">
           <nav>
             <MobileNav />
           </nav>
@@ -42,3 +60,10 @@ const Home = () => {
 };
 
 export default Home;
+
+Home.getInitialProps = (ctx) => {
+  // Get the window width from the server-side context
+  const { req } = ctx;
+  const windowScroll = req ? req.headers["user-agent"] : window.scrollY;
+  return { windowScroll };
+};
