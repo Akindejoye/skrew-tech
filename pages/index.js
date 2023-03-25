@@ -5,8 +5,10 @@ import MobileNav from "../components/mobileNav";
 import Hero from "../components/hero";
 import Solutions from "./../components/solutions/index";
 import Services from "../components/services";
+import ContactUs from "../components/contactUs";
 import { Link } from "react-scroll/modules";
 import { useGetScroll } from "../CustomHooks/useGetScroll";
+import Slide from "./../components/slide/index";
 
 const Home = ({ windowScroll }) => {
   const [currentWindowScroll] = useGetScroll(windowScroll);
@@ -16,6 +18,17 @@ const Home = ({ windowScroll }) => {
       <Head>
         <title>Skrew Tech</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       </Head>
       <body>
         {currentWindowScroll >= 520 && (
@@ -49,6 +62,12 @@ const Home = ({ windowScroll }) => {
           </section>
           <section className="team" id="resources">
             <Team />
+          </section>
+          {/* <section className="team" id="resources">
+            <Slide />
+          </section> */}
+          <section id="contactUs">
+            <ContactUs />
           </section>
         </main>
         <footer>

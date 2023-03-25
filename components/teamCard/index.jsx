@@ -5,7 +5,6 @@ const TeamCard = ({ name, desc, img }) => {
     <>
       <div className="box">
         <div className="img-box">
-          {/* <img src={img} alt="Software Engineer" /> */}
           <Image src={img} alt="Picture of the author" />
         </div>
         <div className="text-box">

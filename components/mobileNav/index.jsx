@@ -55,10 +55,29 @@ const MobileNav = () => {
                   Company
                 </Link>
               </li>
-              <li>Blog</li>
-              <li>Contact Us</li>
+              {/* <li>Blog</li> */}
+              <li>
+                <Link
+                  activeClass="active"
+                  to="contactUs"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={700}
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
-            <button>Let&apos;s Talk</button>
+            <Link
+              to="contactUs"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={700}
+            >
+              <button>Let&apos;s Talk</button>
+            </Link>
           </div>
         </div>
 
@@ -117,8 +136,20 @@ const MobileNav = () => {
                 Company
               </Link>
             </li>
-            <li>Blog</li>
-            <li>Contact Us</li>
+            {/* <li>Blog</li> */}
+            <li>
+              <Link
+                activeClass="active"
+                to="contactUs"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={1500}
+                onClick={handleNav}
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

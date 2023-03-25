@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import Slider from "../slider/Slider";
 import Mayor from "/public/images/se-one.svg";
 import Chief from "/public/images/chief-tec.svg";
 import PM from "/public/images/pm.svg";
 import TeamCard from "../teamCard";
 import TeamCardLarge from "../teamCardLarge";
 import { useGetWidth } from "../../CustomHooks/useGetWidth";
+import Slider from "./../slider/Slider";
 
 const Team = ({ windowWidth }) => {
   const [currentWindowWidth] = useGetWidth(windowWidth);
@@ -52,6 +52,54 @@ const Team = ({ windowWidth }) => {
     />,
   ];
 
+  const slide = [
+    {
+      name: "Okunola O. Ogunlola",
+      desc: "Chief Technology Officer",
+      img: Chief,
+    },
+    {
+      name: "Oyeleye Mayowa",
+      desc: "Software Engineer",
+      img: Mayor,
+    },
+    {
+      name: "Akinwumi Akinyemi",
+      desc: "Project Manager",
+      img: PM,
+    },
+    {
+      name: "Okunola O. Ogunlola",
+      desc: "Chief Technology Officer",
+      img: Chief,
+    },
+    {
+      name: "Oyeleye Mayowa",
+      desc: "Software Engineer",
+      img: Mayor,
+    },
+    {
+      name: "Akinwumi Akinyemi",
+      desc: "Project Manager",
+      img: PM,
+    },
+    {
+      name: "Okunola O. Ogunlola",
+      desc: "Chief Technology Officer",
+      img: Chief,
+    },
+    {
+      name: "Oyeleye Mayowa",
+      desc: "Software Engineer",
+      img: Mayor,
+    },
+    {
+      name: "Akinwumi Akinyemi",
+      desc: "Project Manager",
+      img: PM,
+    },
+  ];
+
   const slidesSmall = [
     <TeamCard
       key="chief"
@@ -85,12 +133,13 @@ const Team = ({ windowWidth }) => {
       <div className="team">
         <h2>Meet Our Team</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique in
-          penatibus blandit metus in placerat hac dignissim cursus. Mi at ipsum,
-          tristique nunc. Pellentesque diam accumsan arcu placerat eleifend id.
+          Screw T&apos; Discover, established by experienced IT professionals,
+          offers digital solutions to business and school owners. In our decade
+          of existence, we&apos;ve helped numerous businesses fo flourish, as
+          evidenced by our clients&apos; success and satisfaction.
         </p>
-        <div>
-          <Slider slides={slides} />
+        <div className="relative">
+          <Slider slides={slides}></Slider>
         </div>
       </div>
     </>

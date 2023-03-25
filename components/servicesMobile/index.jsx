@@ -6,9 +6,12 @@ const ServicesMobile = () => {
       <div className="content">
         <h1>Our Services</h1>
         <h2>Demand First-Rate Best Services</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          at consequat
+        <p className="content-mobile">
+          We offer Comprehensive Information Technology solutions to address all
+          your business needs, including electronic payment solutions,
+          accounting software, stock management, ordering and supply chain
+          challenges. Additionally, we also cater to the education sector with
+          our consultancy and ICT training services.
         </p>
       </div>
       <div className="graphics">

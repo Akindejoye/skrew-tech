@@ -1,3 +1,5 @@
+import { Link } from "react-scroll/modules";
+
 const Hero = () => {
   return (
     <>
@@ -9,15 +11,28 @@ const Hero = () => {
           <div className="imageTwoBox">
             <img src="/images/ws-dark.svg" className="imageTwo" alt="" />
           </div>
-          <div className="bulb"></div>
+          <div className="bulb">
+            <img src="/images/bulb.svg" alt="Buld" />
+          </div>
+          <div className="bulb-big">
+            <img src="/images/bulb-big.svg" alt="Buld" />
+          </div>
         </div>
         <div className="bottom">
           <h1>Find The Best Solution</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit adipisicing
-            elit.
+          <p className="header-text">
+            To digital transformation of your Small and Mid-sized Enterprises,
+            workloads and payment pattern.
           </p>
-          <button>Contact Us</button>
+          <Link
+            to="contactUs"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={700}
+          >
+            <button>Contact Us</button>
+          </Link>
           <div className="gap">
             <span></span>
             <span></span>

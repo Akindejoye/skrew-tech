@@ -1,4 +1,5 @@
 .services-desktop {
+  max-width: 1512px;
   min-height: 950px;
   position: relative;
 
@@ -23,11 +24,11 @@
         width: 437px;
       }
   
-      p {
+      .content-desk-note {
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        max-width: 505px;
+        max-width: 450px;
         color: var(--clr-terciary);
       }
     }

@@ -10,6 +10,8 @@ import '../components/solutions/solutions.scss';
 import '../components/services/services.scss';
 import '../components/servicesMobile/servicesMobile.scss';
 import '../components/serviceDesktop/serviceDesktop.scss';
+import '../components/contactUs/constactUs.scss';
+import '../components/slide/slide.scss';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
