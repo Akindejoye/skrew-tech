@@ -1,10 +1,20 @@
+import { Link } from "react-scroll/modules";
+
 const Footer = () => {
   return (
     <>
       <div className="footer">
         <div className="top">
           <div className="left">
-            <img src="/images/logo-footer.svg" alt="Logo" />
+            <Link
+              to="header"
+              spy={true}
+              smooth={true}
+              offset={-2000}
+              duration={1500}
+            >
+              <img src="/images/logo-footer.svg" alt="Logo" />
+            </Link>
           </div>
           <div className="right">
             <div className="box-1">

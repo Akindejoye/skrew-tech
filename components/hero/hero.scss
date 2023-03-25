@@ -1,6 +1,5 @@
 .hero {
   max-width: 1512px;
-  margin-bottom: 92px;
   margin-left: 23px;
   margin-right: 22px;
 
@@ -73,6 +72,13 @@
       @media (max-width: 373px) {
         display: none;
       }
+      @media (max-width: 360px) {
+        display: block;
+        top: 190px;
+      }
+      @media (max-width: 350px) {
+        display: none;
+      }
       @media (max-width: 320px) {
         display: block;
         top: 159px;
@@ -112,6 +118,7 @@
       line-height: 42px;
       color: var(--clr-terciary);
       margin-bottom: 36px;
+      text-align: center;
 
       @media (min-width: 1080px) {
         font-size: 52px;
@@ -119,6 +126,7 @@
         line-height: 78px;
         width: 360px;
         margin-bottom: 36px;
+        text-align: left;
       }
 
     }

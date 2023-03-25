@@ -26,7 +26,7 @@ const MobileNav = () => {
                   spy={true}
                   smooth={true}
                   offset={0}
-                  duration={700}
+                  duration={1500}
                 >
                   Services
                 </Link>
@@ -38,7 +38,7 @@ const MobileNav = () => {
                   spy={true}
                   smooth={true}
                   offset={0}
-                  duration={700}
+                  duration={1500}
                 >
                   Resources
                 </Link>
@@ -50,7 +50,7 @@ const MobileNav = () => {
                   spy={true}
                   smooth={true}
                   offset={0}
-                  duration={700}
+                  duration={1500}
                 >
                   Company
                 </Link>
@@ -63,7 +63,7 @@ const MobileNav = () => {
                   spy={true}
                   smooth={true}
                   offset={0}
-                  duration={700}
+                  duration={1500}
                 >
                   Contact Us
                 </Link>
@@ -74,7 +74,7 @@ const MobileNav = () => {
               spy={true}
               smooth={true}
               offset={0}
-              duration={700}
+              duration={1500}
             >
               <button>Let&apos;s Talk</button>
             </Link>

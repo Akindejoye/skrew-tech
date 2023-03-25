@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Mayor from "/public/images/se-one.svg";
 import Chief from "/public/images/chief-tec.svg";
 import PM from "/public/images/pm.svg";
+import FD from "/public/images/anon.avif";
 import TeamCard from "../teamCard";
 import TeamCardLarge from "../teamCardLarge";
 import { useGetWidth } from "../../CustomHooks/useGetWidth";
@@ -12,7 +13,7 @@ const Team = ({ windowWidth }) => {
 
   let slidesBig = [
     <TeamCardLarge
-      key="chief"
+      key="1"
       name="Okunola O. Ogunlola"
       desc="Chief Technology Officer"
       img={Chief}
@@ -25,10 +26,10 @@ const Team = ({ windowWidth }) => {
       classNames="slide-animat"
     />,
     <TeamCardLarge
-      key="mayo"
-      name="Oyeleye Mayowa"
+      key="2"
+      name="Francis Akindejoye"
       desc="Software Engineer"
-      img={Mayor}
+      img={FD}
       nameTwo="Okunola O. Ogunlola"
       descTwo="Chief Technology Officer"
       imgTwo={Chief}
@@ -102,27 +103,33 @@ const Team = ({ windowWidth }) => {
 
   const slidesSmall = [
     <TeamCard
-      key="chief"
+      key="0"
       name="Okunola O. Ogunlola"
       desc="Chief Technology Officer"
       img={Chief}
     />,
     <TeamCard
-      key="mayo"
+      key="1"
       name="Oyeleye Mayowa"
       desc="Software Engineer"
       img={Mayor}
     />,
     <TeamCard
-      key="akin"
+      key="2"
       name="Akinwumi Akinyemi"
       desc="Project Manager"
       img={PM}
     />,
+    <TeamCard
+      key="3"
+      name="Francis Akindejoye"
+      desc="Front End Developer"
+      img={FD}
+    />,
   ];
 
   const selectSlide = (slideOne, slideTwo) => {
-    if (currentWindowWidth >= 1220) return slideOne;
+    if (currentWindowWidth >= 1200) return slideOne;
     return slideTwo;
   };
 

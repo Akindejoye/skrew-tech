@@ -1,7 +1,20 @@
-.servicesMobile {
+.servicesSection {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 96px;
+  padding-left: 31px;
+  padding-right: 39px;
+  padding-bottom: 0;
+
+  @media (min-width: 1512px) {
+    display: block;
+    max-width: 1512px;
+    min-height: 950px;
+    position: relative;
+    padding-top: 116px;
+    padding-left: 133px;
+  }
 
   .content {
     display: flex;
@@ -9,7 +22,14 @@
     align-items: center;
     margin-bottom: 55px;
 
-    h1 {
+    @media (min-width: 1512px) {
+      max-width: 505px;
+      min-height: 246px;
+      display: block;
+      // margin-left: 133px;
+    }
+
+    .content-header {
       font-size: 16px;
       font-weight: 800;
       line-height: 24px;
@@ -17,6 +37,13 @@
       color: var(--clr-primary);
       text-align: center;
       text-transform: uppercase;
+
+      @media (min-width: 1512px) {
+        font-size: 24px;
+        line-height: 36px;
+        text-align: left;
+        margin-bottom: 27px;
+      }
     }
 
     h2 {
@@ -25,21 +52,74 @@
       line-height: 30px;
       margin-bottom: 16px;
       color: var(--clr-terciary);
+      text-align: center;
+
+      @media (min-width: 1512px) {
+        font-size: 36px;
+        line-height: 54px;
+        text-align: left;
+        margin-bottom: 27px;
+      }
     }
 
-    .content-mobile {
+    .content-text {
       font-size: 14px;
       font-weight: 400;
       line-height: 21px;
       max-width: 360px;
       text-align: left;
       color: var(--clr-terciary);
+
+      @media (min-width: 1512px) {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 450px;
+      }
     }
   }
 
-  .graphics {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @media (min-width: 1512px) {
+    .frame-1 {
+      height: 315px;
+      width: 330px;
+
+      position: absolute;
+      top: 171px;
+      left: 676px;
+    }
+    .frame-2 {
+      height: 315px;
+      width: 330px;
+
+      position: absolute;
+      top: 105px;
+      right: 136px;
+    }
+    .frame-3 {
+      height: 315px;
+      width: 330px;
+
+      position: absolute;
+      top: 527px;
+      left: 306px;
+    }
+    .frame-4 {
+      height: 315px;
+      width: 330px;
+
+      position: absolute;
+      top: 527px;
+      left: 676px;
+    }
+
+      .frame-5 {
+      height: 315px;
+      width: 330px;
+      margin-left: 27px;
+
+      position: absolute;
+      top: 459px;
+      right: 136px;
+    }
   }
 }

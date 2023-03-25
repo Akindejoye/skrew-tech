@@ -4,7 +4,7 @@ import Team from "../components/team";
 import MobileNav from "../components/mobileNav";
 import Hero from "../components/hero";
 import Solutions from "./../components/solutions/index";
-import Services from "../components/services";
+import Service from "../components/servicesMobile";
 import ContactUs from "../components/contactUs";
 import { Link } from "react-scroll/modules";
 import { useGetScroll } from "../CustomHooks/useGetScroll";
@@ -55,7 +55,7 @@ const Home = ({ windowScroll }) => {
         </header>
         <main>
           <section className="services">
-            <Services />
+            <Service />
           </section>
           <section className="solutions" id="company">
             <Solutions />

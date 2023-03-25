@@ -6,13 +6,13 @@ const ServiceDesktop = () => {
       <div className="content-desk">
         <h1>Our Services</h1>
         <h2>Demand First-Rate Best Services</h2>
-        <p className="content-desk-note">
+        <div className="content-desk-note">
           We offer Comprehensive Information Technology solutions to address all
           your business needs, including electronic payment solutions,
           accounting software, stock management, ordering and supply chain
           challenges. Additionally, we also cater to the education sector with
           our consultancy and ICT training services.
-        </p>
+        </div>
         <div className="frame-1">
           <ServiceCard text="Ui/Ux" image="/images/ui-system.svg" />
         </div>
